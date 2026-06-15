@@ -1,0 +1,159 @@
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="3b95b155-33c6-470e-8a99-a906e478cf1b" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Dim App Usage</ID>
+  <Name>Dim App Usage</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="8b41b78f-fe66-4a97-8939-954112767c18">
+    <DataSourceViewID>Learning DB</DataSourceViewID>
+  </Source>
+  <UnknownMember>Visible</UnknownMember>
+  <ErrorConfiguration dwd:design-time-name="994975f8-7cb8-46e6-9476-2a2d7b1dbe5c">
+    <KeyNotFound>ReportAndStop</KeyNotFound>
+    <KeyDuplicate>ReportAndStop</KeyDuplicate>
+    <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+  </ErrorConfiguration>
+  <CurrentStorageMode>Molap</CurrentStorageMode>
+  <Attributes>
+    <Attribute dwd:design-time-name="6ad4549c-b387-45bf-840c-c1d9d8ce0b4e">
+      <ID>App Usage Key</ID>
+      <Name>App Usage Key</Name>
+      <Usage>Key</Usage>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="4bb7b00e-2df2-40c0-84ea-b5fde5f81be6">
+          <DataType>Integer</DataType>
+          <NullProcessing>UnknownMember</NullProcessing>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="f7f5b7da-c121-4a6c-a90c-05435aeca9cb">
+            <TableID>dbo_Dim_AppUsage</TableID>
+            <ColumnID>app_usage_key</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="66dae411-4ccb-4ff3-8a6b-94577c70ad43">
+          <AttributeID>App Category</AttributeID>
+          <Name>App Category</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="c62f4974-8a27-4a4f-a9e0-a2bd59989532">
+          <AttributeID>Daily App Minutes</AttributeID>
+          <Name>Daily App Minutes</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="3c13cd0a-e8d7-463e-8ff7-683ea4af0604">
+          <AttributeID>Session Count Weekly</AttributeID>
+          <Name>Session Count Weekly</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="e87a7cf0-a440-4108-b192-21a317bb8d63">
+          <AttributeID>Engagement Consistency</AttributeID>
+          <Name>Engagement Consistency</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="5d66cecd-45be-40f6-b4f6-79859de0c255">
+      <ID>App Category</ID>
+      <Name>App Category</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="88fd776e-6f05-49fc-8d69-a0d79623a9e1">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="f9ef57c9-b987-4096-a652-79a50473f0ad">
+            <TableID>dbo_Dim_AppUsage</TableID>
+            <ColumnID>app_category</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="d9ea1345-8eac-48be-8b5c-0cf618733e49">
+      <ID>Daily App Minutes</ID>
+      <Name>Daily App Minutes</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="1332a830-c890-4ef3-9822-877a8b1ede25">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="4c580a84-2d81-44c8-8f35-8158279de0b6">
+            <TableID>dbo_Dim_AppUsage</TableID>
+            <ColumnID>daily_app_minutes</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="68a0ff73-5866-4553-9c0d-4fee9b058f0c">
+      <ID>Session Count Weekly</ID>
+      <Name>Session Count Weekly</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="cccb6331-14f3-4d86-860c-8555f0cd6234">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="5092aae7-641c-4d83-ba90-162028eb45f9">
+            <TableID>dbo_Dim_AppUsage</TableID>
+            <ColumnID>session_count_weekly</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="ce63a0cb-ad1c-409f-99c4-835abe13094b">
+      <ID>Engagement Consistency</ID>
+      <Name>Engagement Consistency</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="719bce3f-1079-4caf-bb88-128c7dcf7b90">
+          <DataType>Double</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="6d7ee012-a0d6-456f-af0c-fc046e6c315d">
+            <TableID>dbo_Dim_AppUsage</TableID>
+            <ColumnID>engagement_consistency</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+  </Attributes>
+  <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
+</Dimension>
